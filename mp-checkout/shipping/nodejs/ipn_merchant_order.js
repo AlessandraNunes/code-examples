@@ -14,9 +14,9 @@ http.createServer(function (req, res) {
 
     switch (topic) {
         case "payment":
-            mp.get("/collections/notifications/"+params.id).
+            mp.get("/v1/payments/"+params.id).
                 then (function (payment_info) {
-                    mp.get ("/merchant_orders/"+payment_info.response.collection.merchant_order_id)
+                    mp.get ("/merchant_orders/"+payment_info.response.order.id)
                         .then (processMerchantOrder);
                 });
         break;
