@@ -7,7 +7,7 @@
 
 	Map<String, Object> filters = new HashMap<String, Object> ();
 
-	filters.put("payment_type", "credit_card");
+	filters.put("payment_type_id", "credit_card");
 	filters.put("operation_type", "regular_payment");
 	filters.put("range", "date_created");
 	filters.put("begin_date", "2014-10-21T00:00:00Z");

@@ -7,10 +7,10 @@
 
 	Map<String, Object> filters = new HashMap<String, Object> ();
 
-	filters.put("payment_type", "credit_card");
+	filters.put("payment_type_id", "credit_card");
 	filters.put("operation_type", "regular_payment");
 	filters.put("installments", "12");
-	filters.put("reason", "Your-item-title");
+	filters.put("description", "Your-item-title");
 
 	JSONObject searchResult = mp.searchPayment (filters);
 

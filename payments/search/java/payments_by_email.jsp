@@ -9,7 +9,7 @@
 
 	filters.put("status", "approved");
 	filters.put("operation_type", "regular_payment");
-	filters.put("payer_email", "payer1@email.com payer2@email.com");
+	filters.put("payer.email", "payer1@email.com");
 
 	JSONObject searchResult = mp.searchPayment (filters);
 

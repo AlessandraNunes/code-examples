@@ -11,7 +11,7 @@ def index(req, **kwargs):
     filters = {
         "status": "approved",
         "operation_type": "regular_payment",
-        "payer_email": "payer1@email.com payer2@email.com"
+        "payer.email": "payer1@email.com"
     }
 
     searchResult = mp.search_payment(filters)
