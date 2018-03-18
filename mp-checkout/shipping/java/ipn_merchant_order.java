@@ -15,8 +15,8 @@ public class ReceiveFeed extends HttpServlet {
         JSONObject merchantOrderInfo = null;
 
         if (topic == "payment") {
-            JSONObject paymentInfo = mp.get ("/collections/notifications/"+request.getParameter["id"]);
-            merchantOrderInfo = mp.get ("/merchant_orders/"+paymentInfo.getJSONObject("response").getJSONObject("collection").getInt("merchant_order_id"));
+            JSONObject paymentInfo = mp.get ("/v1/payments/"+request.getParameter["id"]);
+            merchantOrderInfo = mp.get ("/merchant_orders/"+paymentInfo.getJSONObject("response").getJSONObject("order").getString("id"));
         } else if (topic == "merchant_order") {
             merchantOrderInfo = mp.get ("/merchant_orders/"+request.getParameter["id"]);
         }

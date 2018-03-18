@@ -9,8 +9,8 @@ def index(req, **kwargs):
     merchant_order_info = None
 
     if topic == "payment"
-        payment_info = mp.get("/collections/notifications/"+kwargs["id"])
-        merchant_order_info = mp.get("/merchant_orders/"+payment_info["response"]["collection"]["merchant_order_id"])
+        payment_info = mp.get("/v1/payments/"+kwargs["id"])
+        merchant_order_info = mp.get("/merchant_orders/"+payment_info["response"]["order"]["id"])
     elif topic == "merchant_order"
         merchant_order_info = mp.get("/merchant_orders/"+kwargs["id"])
 

@@ -3,5 +3,5 @@ AT=`curl -s -X POST -H 'content-type: application/x-www-form-urlencoded' 'https:
 
 curl -X PUT \
 -H "Content-Type: application/json" \
-'https://api.mercadopago.com/collections/:ID?access_token=$AT' \
+'https://api.mercadopago.com/v1/payments/:ID?access_token=$AT' \
 -d '{"status":"cancelled"}'

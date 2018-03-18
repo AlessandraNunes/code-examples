@@ -14,8 +14,8 @@ $merchant_order_info = null;
 
 switch ($topic) {
     case 'payment':
-        $payment_info = $mp->get("/collections/notifications/".$_GET["id"]);
-        $merchant_order_info = $mp->get("/merchant_orders/".$payment_info["response"]["collection"]["merchant_order_id"]);
+        $payment_info = $mp->get("/v1/payments/".$_GET["id"]);
+        $merchant_order_info = $mp->get("/merchant_orders/".$payment_info["response"]["order"]["id"]);
         break;
     case 'merchant_order':
         $merchant_order_info = $mp->get("/merchant_orders/".$_GET["id"]);
