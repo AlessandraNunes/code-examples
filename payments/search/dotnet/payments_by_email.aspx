@@ -9,7 +9,7 @@ Dictionary<String, String> filters = new Dictionary<String, String> ();
 
 filters.Add("status", "approved");
 filters.Add("operation_type", "regular_payment");
-filters.Add("payer_email", "payer1@email.com payer2@email.com");
+filters.Add("payer.email", "payer1@email.com");
       
 Hashtable searchResult = mp.searchPayment (filters);
 
